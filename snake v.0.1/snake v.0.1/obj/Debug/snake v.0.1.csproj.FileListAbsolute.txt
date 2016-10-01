@@ -1,0 +1,6 @@
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\bin\Debug\snake v.0.1.exe.config
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\bin\Debug\snake v.0.1.exe
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\bin\Debug\snake v.0.1.pdb
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\obj\Debug\snake v.0.1.csprojResolveAssemblyReference.cache
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\obj\Debug\snake v.0.1.exe
+C:\Users\Денис\Desktop\GameDev\Змейка\snake v.0.1\snake v.0.1\obj\Debug\snake v.0.1.pdb
