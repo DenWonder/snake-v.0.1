@@ -43,5 +43,10 @@ namespace snake_v._0._1
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+        public void Clear() //Метод для удаления(зачищения) отображающегося объекта
+        {
+            sym = ' ';
+            Draw();
+        }
     }
 }
