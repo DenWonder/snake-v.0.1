@@ -28,18 +28,20 @@ namespace snake_v._0._1
             point p = new point(4,5,'0'); //Начальное положение и, конечно же, символ отображения
             Snake snake = new Snake(p, 5, Direction.RIGHT); //Длинна и направление
             snake.drow(); //Отрисовка объекта "Змейка"
-            snake.Move(); //Реализация движения змейки
-            Thread.Sleep(300); //Пауза в отображении для нагляности и пущего реализма.
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Console.ReadLine(); //Команда завершение работы программы после её выполнения.
+
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+
+                }
+                Thread.Sleep(200);
+                snake.Move();
+            }
+
         }
     }
 }
