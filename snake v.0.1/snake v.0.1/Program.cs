@@ -10,21 +10,22 @@ namespace snake_v._0._1
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
-            draw(x1,y1,sym1);
+            Console.SetBufferSize(80,25);
 
-            int x2 = 4;
-            int y2 = 5;
-            char sym2 = '%';
-            draw(x2,y2,sym2);
+            HorizontalLine upLine = new HorizontalLine(0,78,0,'*');
+            upLine.drow();
+            HorizontalLine DownLine = new HorizontalLine(0, 78, 24, '*');
+            DownLine.drow();
+
+            VerticalLine LeftLine = new VerticalLine( 0, 24, 0, '*');
+            LeftLine.drow();
+            VerticalLine RightLine = new VerticalLine(0, 24, 78, '*');
+            RightLine.drow();
+            point p = new point(4,5,'0');
+            Snake snake = new Snake(p, 5, Direction.RIGHT);
+            snake.drow();
+
             Console.ReadLine();
-        }
-        static void draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x,y);
-            Console.Write(sym);
         }
     }
 }
