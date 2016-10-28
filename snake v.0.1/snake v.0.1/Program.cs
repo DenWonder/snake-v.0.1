@@ -29,18 +29,34 @@ namespace snake_v._0._1
             Snake snake = new Snake(p, 5, Direction.RIGHT); //Длинна и направление
             snake.drow(); //Отрисовка объекта "Змейка"
 
+            FoodCreator foodcreator = new FoodCreator(80, 25, '$');
+            point food = foodcreator.CreateFood();
+            food.Draw();
+
+
 
             while (true)
-            {
-                if (Console.KeyAvailable)
-                {
-                    ConsoleKeyInfo key = Console.ReadKey();
-                    snake.HandleKey(key.Key);
+              {
+                    if (snake.Eat(food))
+                         {
+                               food = foodcreator.CreateFood();
+                               food.Draw();
+                         }
 
-                }
+                else
+                         {
+                              snake.Move();
+                         }
                 Thread.Sleep(200);
-                snake.Move();
-            }
+
+                if (Console.KeyAvailable)
+                         {
+                               ConsoleKeyInfo key = Console.ReadKey();
+                               snake.HandleKey(key.Key);
+
+                         }
+
+              }
 
         }
     }

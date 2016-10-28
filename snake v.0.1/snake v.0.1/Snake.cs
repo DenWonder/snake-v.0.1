@@ -49,5 +49,20 @@ namespace snake_v._0._1
                 direction = Direction.UP;
 
         }
+        internal bool Eat( point food )
+            {
+              point head = GetNextPoint();
+                if (head.IsHit(food))
+                    {
+                       food.sym = head.sym;
+                       pList.Add(food);
+                        return true;
+                    }
+                 else
+                   {
+                       return false;
+                   }
+
+            }
     }
 }
